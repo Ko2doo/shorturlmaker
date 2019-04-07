@@ -1,0 +1,12 @@
+{
+    "name": "deadheadcore/shorturlmaker",
+    "type": "project",
+    "authors": [
+        {
+            "name": "DeadHeadCore",
+            "email": "deadheadcore@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
