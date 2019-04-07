@@ -94,9 +94,6 @@ function serverURL()
                 chart.draw(data, options);
             }
 
-            drawMaterialChart();
-            window.onresize = drawMaterialChart;
-
             var dataGeo = google.visualization.arrayToDataTable(
                 dataArrC
             );
@@ -112,10 +109,10 @@ function serverURL()
                 var chartGeo = new google.visualization.GeoChart(document.getElementById('regions_div'));
                 chartGeo.draw(dataGeo, optionsGeo);
             }
-
-            drawMaterialGeo();
-            window.onresize = drawMaterialGeo();
-
+                drawMaterialChart();
+                window.onresize = drawMaterialChart;
+                drawMaterialGeo();
+                window.onresize = drawMaterialGeo();
         }
     </script>
     <style>
@@ -166,18 +163,19 @@ function serverURL()
 
             <!--begin tabs going in wide content -->
             <ul class="nav nav-tabs" id="maincontent" role="tablist">
-                <li class="active"><a href="#pie" role="tab" data-toggle="tab">Диаграмма</a></li>
+<!--                <li class="active"><a href="#pie" role="tab" data-toggle="tab">Диаграмма</a></li>-->
                 <li><a href="#geo" role="tab" data-toggle="tab">Геолокация</a></li>
             </ul><!--/.nav-tabs.content-tabs -->
 
             <div class="tab-content" align="center">
                 <div class="tab-pane fade in active" id="pie">
-                    <div id="piechart_3d"></div>
+                    <br>
+                    <?= $userAgents ? '<div id="piechart_3d"></div>' : 'Нет данных' ?>
                 </div><!--/.tab-pane -->
 
                 <div class="tab-pane fade" id="geo">
                     <br>
-                    <div id="regions_div"></div>
+                    <?= $countries ? '<div id="regions_div"></div>' : 'Нет данных' ?>
                 </div><!--/.tab-pane -->
             </div><!--/.tab-content -->
             <br>
