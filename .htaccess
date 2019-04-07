@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(([A-Za-z0-9\-]+/)*[A-Za-z0-9\-]+)?$ $1.php
+RewriteRule ^r/([[a-zA-Z0-9]+)/? /r.php?c=$1 [L]
+RewriteRule ^s/([[a-zA-Z0-9]+)/? /s.php?id=$1 [L]
