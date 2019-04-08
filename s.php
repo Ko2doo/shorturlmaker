@@ -163,7 +163,7 @@ function serverURL()
 
             <!--begin tabs going in wide content -->
             <ul class="nav nav-tabs" id="maincontent" role="tablist">
-<!--                <li class="active"><a href="#pie" role="tab" data-toggle="tab">Диаграмма</a></li>-->
+                <li class="active"><a href="#pie" role="tab" data-toggle="tab">Диаграмма</a></li>
                 <li><a href="#geo" role="tab" data-toggle="tab">Геолокация</a></li>
             </ul><!--/.nav-tabs.content-tabs -->
 
