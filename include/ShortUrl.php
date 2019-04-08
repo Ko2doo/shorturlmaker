@@ -463,7 +463,7 @@ class ShortUrl
         $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
         $country = $geo["geoplugin_countryName"];
 
-        return (!$country) ? "Unknown" : $country;
+        return (!$country) ? "Uzbekistan" : $country;
     }
 
 }
